@@ -1,0 +1,107 @@
+* {
+    normal-black:               #1B1B1E; 
+    normal-green:               #557B4D;
+    normal-white:               #FDFDFF;
+    normal-yellow:              #FFCF56;
+    dim-black:                  #151517;
+    dim-white:                  #EAEAEA;
+
+    backgroud:                  @normal-white;
+    foreground:                 @dim-black;
+    background-alt:             @dim-white;
+    selected-background:        @normal-green;
+    urgent-foreground:          @normal-yellow;
+}
+
+window {
+    border-color:       @background;
+    background-color:   @background;
+    font:               "JetBrains Mono Nerd Font Regular 12";
+}
+
+mainbox {
+    background-color: inherit;
+    children:   [ inputbar, message, listview ];
+}
+
+inputbar {
+    background-color: inherit;
+    text-color: @foreground;
+    children:   [ prompt,textbox-prompt-colon,entry, num-filtered-rows, textbox-num-sep, num-rows, case-indicator ];
+}
+
+#prompt {
+}
+
+textbox-prompt-colon {
+    margin:     0px 0.3000em 0.0000em 0.0000em ;
+    expand:     false;
+    str:        ":";
+    text-color: inherit;
+}
+
+entry {
+    spacing:            9;
+    text-color:         inherit;
+    placeholder-color:  grey;
+    placeholder:        "Type to filter";
+}
+
+num-filtered-rows, num-rows {
+    text-color: grey;
+    expand: false;
+}
+
+textbox-num-sep {
+    text-color: grey;
+    expand: false;
+    str: "/";
+}
+
+listview {
+    border-color:       @normal-green;
+    border:             1 0 0 0;
+    columns:            3;
+    scrollbar:          false;
+}
+
+element-text {
+    padding:    1 5;
+    background: @background;
+    text-color: @foreground;
+}
+
+#element.selected.normal {
+    background-color:   @selected-background;
+    text-color:         inherit;
+}
+
+#element.selected.active {
+    background-color:   @selected-background;
+    text-color:         inherit;
+}
+
+#element.selected.urgent {
+    background-color:   @selected-background;
+    text-color:         @urgent-foreground;
+}
+
+#element.normal.urgent {
+    background-color:   inherit;
+    text-color:         @urgent-foreground;
+}
+
+#element.alternate.normal {
+    background-color:   @background-alt;
+    text-color:         inherit;
+}
+
+#element.alternate.active {
+    background-color:   @background-alt;
+    text-color:         inherit;
+}
+
+#element.alternate.urgent {
+    background-color:   @background-alt;
+    text-color:         @urgent-foreground;
+}

@@ -1,0 +1,8 @@
+# make sure trash folder exists
+%mkdir -p ~/.trash
+ 
+# move current file or selected files to trash folder
+# (also see 'man mv' for backup/overwrite options)
+cmd trash %set -f; mv $fx ~/.trash
+
+set previewer ~/.config/lf/previewer.sh
