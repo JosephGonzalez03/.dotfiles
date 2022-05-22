@@ -14,8 +14,8 @@
 
 window {
     padding:            0;
-    border-color:       transparent;
-    background-color:   transparent;
+    border-color:       @background-alt;
+    background-color:   @background-alt;
     font:               "JetBrains Mono Nerd Font Regular 12";
 }
 
@@ -46,6 +46,8 @@ textbox-prompt-colon {
 
 entry {
     spacing:            inherit;
+    border:             0 0 3 0;
+    border-color:       @background;
     background-color:   @background-alt;
     text-color:         @foreground-alt;
     placeholder-color:  inherit;
@@ -76,7 +78,7 @@ listview {
 }
 
 element-text {
-    padding:            1 1 2;
+    padding:            2 1 2;
     background-color:   @background-alt;
     text-color:         @foreground-alt;
 }
@@ -90,9 +92,9 @@ element-text {
 }
 
 #element.selected.normal {
-    border:             0 0 3 0;
+    border:             3 0 3 0;
     border-color:       @background;
-    background-color:   inherit;
+    background-color:   @background;
     text-color:         inherit;
 }
 
