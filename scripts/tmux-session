@@ -1,7 +1,7 @@
 #!/bin/bash
 
 starting_dir=$(pwd)
-project_name=$(echo $(basename $(pwd)) | sed -e "s/./_/")
+project_name=$(echo $(basename $(pwd)) | sed -e "s/\./_/")
 
 tmux new -s $project_name -d
 tmux rename-window editor
