@@ -78,7 +78,7 @@ listview {
 }
 
 element-text {
-    padding:            2 1 2;
+    padding:            2 6 2;
     background-color:   @background-alt;
     text-color:         @foreground-alt;
 }
@@ -92,33 +92,28 @@ element-text {
 }
 
 #element.selected.normal {
-    border:             3 0 3 0;
+    border:             3;
     border-color:       @background;
-    background-color:   @background;
     text-color:         inherit;
 }
 
 #element.selected.active {
     border:             0;
     border-color:       @background-alt;
-    background-color:   inherit;
     text-color:         inherit;
 }
 
 #element.selected.urgent {
-    border:             inherit;
     background-color:   inherit;
     text-color:         @urgent-foreground;
 }
 
 #element.normal.urgent {
-    border:             inherit;
     background-color:   inherit;
     text-color:         @urgent-foreground;
 }
 
 #element.alternate.urgent {
-    border:             inherit;
     background-color:   inherit;
     text-color:         @urgent-foreground;
 }
