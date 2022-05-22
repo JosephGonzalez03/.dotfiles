@@ -40,5 +40,5 @@ bspc rule -a Lutris desktop='gaming' follow=on
 bspc rule -a Nitrogen desktop='settings' follow=on
 bspc rule -a Pcmanfm desktop='settings' follow=on
 bspc rule -a Piper desktop='settings' follow=on
-bspc rule -a Org.gnome.DejaDup desktop='settings' follow=on
+bspc rule -a org.gnome.DejaDup desktop='settings' follow=on
 bspc rule -a Buttercup desktop='settings' follow=on
