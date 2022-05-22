@@ -82,7 +82,7 @@ listview {
 }
 
 element-text {
-    padding:            2 1 2;
+    padding:            2 6 2;
     background-color:   @background-alt;
     text-color:         @foreground-alt;
 }
@@ -96,7 +96,8 @@ element-text {
 }
 
 #element.selected.normal {
-    background-color:   @background;
+    border:             3;
+    border-color:       @background;
     text-color:         inherit;
 }
 
@@ -106,7 +107,7 @@ element-text {
 }
 
 #element.selected.urgent {
-    background-color:   @background;
+    background-color:   inherit;
     text-color:         @urgent-foreground;
 }
 
