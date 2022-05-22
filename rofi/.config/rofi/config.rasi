@@ -1,5 +1,5 @@
 configuration {
-	modi: "run,window,power-menu:rofi-power-menu --choices=lockscreen/suspend/reboot/shutdown";
+	modi: "run,window,power-menu:rofi-power-menu --choices=suspend/reboot/shutdown";
 }
 
 @import "forest-theme.rasi"
