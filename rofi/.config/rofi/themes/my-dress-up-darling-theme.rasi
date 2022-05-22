@@ -1,0 +1,121 @@
+* {
+    normal-black:               #1B1B1E;
+    normal-pink:                #E9B8C2;
+    normal-green:               #528D6F;
+    normal-brown:               #DFDDAD;
+    normal-yellow:              #FFCF56;
+    normal-white:               #FDFCF6;
+
+    bright-pink:                #FEE7E3;
+
+
+    background:                 @normal-pink;
+    foreground:                 @normal-white;
+    background-alt:             @normal-white;
+    foreground-alt:             @normal-black;
+    urgent-foreground:          @normal-yellow;
+}
+
+window {
+    padding:            0;
+    border-color:       @background-alt;
+    background-color:   @background-alt;
+    font:               "JetBrains Mono Nerd Font Regular 12";
+}
+
+mainbox {
+    children:   [ inputbar, message, listview ];
+}
+
+inputbar {
+    padding:    5;
+    background-color: transparent;
+    text-color: @foreground;
+    children:   [ prompt, textbox-prompt-colon, entry, textbox-prompt-colon, num-filtered-rows, textbox-num-sep, num-rows ];
+}
+
+#prompt {
+    spacing:            inherit;
+    background-color:   @background;
+    text-color:         @foreground;
+    padding:            inherit;
+}
+
+textbox-prompt-colon {
+    expand:     false;
+    str:        "";
+    background-color: inherit;
+    text-color: inherit;
+}
+
+entry {
+    spacing:            inherit;
+    border:             0 0 3 0;
+    border-color:       @background;
+    background-color:   @background-alt;
+    text-color:         @foreground-alt;
+    placeholder-color:  inherit;
+    placeholder:        "Type to filter";
+    padding:            inherit;
+}
+
+num-filtered-rows, num-rows {
+    expand: false;
+    padding: inherit;
+    background-color:   @background;
+    text-color:         inherit;
+}
+
+textbox-num-sep {
+    expand: false;
+    str: "/";
+    padding: inherit;
+    background-color: @background;
+    text-color: inherit;
+}
+
+listview {
+    padding:            5;
+    border:             0;
+    columns:            3;
+    scrollbar:          false;
+}
+
+element-text {
+    padding:            2 1 2;
+    background-color:   @background-alt;
+    text-color:         @foreground-alt;
+}
+
+#element.normal.normal {
+    background-color:   inherit;
+}
+
+#element.alternate.normal {
+    background-color:   inherit;
+}
+
+#element.selected.normal {
+    background-color:   @background;
+    text-color:         inherit;
+}
+
+#element.selected.active {
+    background-color:   @background;
+    text-color:         inherit;
+}
+
+#element.selected.urgent {
+    background-color:   @background;
+    text-color:         @urgent-foreground;
+}
+
+#element.normal.urgent {
+    background-color:   inherit;
+    text-color:         @urgent-foreground;
+}
+
+#element.alternate.urgent {
+    background-color:   inherit;
+    text-color:         @urgent-foreground;
+}

@@ -46,8 +46,8 @@ case "$selected_theme" in
         ;;
     "simp")
         update_wallpaper 'my-dress-up-darling'
-        update_polybar_theme 'dr-stone-theme'
-        update_rofi_theme 'dr-stone-theme'
+        update_polybar_theme 'my-dress-up-darling-theme'
+        update_rofi_theme 'my-dress-up-darling-theme'
         update_alacritty_theme 'my-dress-up-darling'
         ;;
     *)
