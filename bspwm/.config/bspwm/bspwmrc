@@ -8,8 +8,8 @@ killall "nitrogen"
 
 ### Autostart
 sxhkd &
-feh --no-fehbg --bg-scale '/home/joe/Pictures/Wallpapers/young-senku.jpg'
-$HOME/.config/polybar/dr-stone-theme/launch.sh &
+feh --no-fehbg --bg-scale '/home/joe/Pictures/Wallpapers/road-marking-trees.jpg'
+$HOME/.config/polybar/forest-theme/launch.sh &
 picom --vsync --backend glx &
 
 ### Monitors

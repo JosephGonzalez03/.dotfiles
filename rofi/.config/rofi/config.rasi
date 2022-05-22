@@ -2,4 +2,4 @@ configuration {
 	modi: "run,window,power-menu:rofi-power-menu --choices=lockscreen/suspend/reboot/shutdown";
 }
 
-@import "dr-stone-theme.rasi"
+@import "forest-theme.rasi"

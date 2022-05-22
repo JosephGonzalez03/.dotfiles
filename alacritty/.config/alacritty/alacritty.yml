@@ -262,7 +262,7 @@ themes:
         cyan:    '#FEE7E3'
         white:   '#FDFCF6'
 
-colors: *dr-stone-theme
+colors: *forest-theme
 
 # Bell
 #
