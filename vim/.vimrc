@@ -1,3 +1,5 @@
+let mapleader = " "
+
 "=== File Settings ===
 set encoding=utf-8 " Set encoding for glyphs to display properly
 syntax on
@@ -16,8 +18,6 @@ set autoindent
 filetype plugin indent on
 
 "=== IDE plugins ===
-let mapleader = " "
-
 vnoremap <leader>y :!xclip -f -sel clip<CR>
 nnoremap <leader>p :r !xclip -o -sel clip<CR>
 nnoremap <leader>P :-1r !xclip -o -sel clip<CR>
