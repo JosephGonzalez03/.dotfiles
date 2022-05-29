@@ -7,6 +7,8 @@
 
 source ~/.git-prompt.sh
 
+bind '"\C-f":"tmux new -c $(cd ~ && find . -type d -print | fzf | xargs -I directory realpath directory) 2>/dev/null; clear \n"'
+
 alias l='exa -l'
 
 export LUA_PATH='/usr/share/lua/5.4/?.lua;/usr/share/lua/5.4/?/init.lua;/usr/lib/lua/5.4/?.lua;/usr/lib/lua/5.4/?/init.lua;./?.lua;./?/init.lua;/home/joe/.luarocks/share/lua/5.4/?.lua;/home/joe/.luarocks/share/lua/5.4/?/init.lua'

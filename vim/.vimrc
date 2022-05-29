@@ -51,11 +51,11 @@ let g:ycm_enable_diagnostic_highlighting = 0
 
 " Setup lombok
 let g:ycm_global_ycm_extra_conf='~/.config/vim/YouCompleteMe/lombok/.ycm_extra_conf.py'
-"--- CtrlP ---
-let g:ctrlp_working_path_mode = 'r'
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
-let g:ctrlp_by_filename = 1
-nnoremap <leader><c-B> :CtrlPBuffer<CR>
+
+"--- Fzf ---
+nnoremap <leader>f :GFiles<CR>
+nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>cm :Commits<CR>
 
 "--- NERDTree ---
 nnoremap <leader>n :NERDTreeToggle<CR>
