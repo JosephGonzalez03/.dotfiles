@@ -1,5 +1,7 @@
 let mapleader = " "
 
+nnoremap <leader>r :source ~/.vimrc<CR>
+
 "=== File Settings ===
 set encoding=utf-8 " Set encoding for glyphs to display properly
 syntax on
