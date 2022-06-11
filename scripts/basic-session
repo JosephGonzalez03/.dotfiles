@@ -6,7 +6,7 @@ project_name=$(echo $(basename $(pwd)) | sed -e "s/\./_/")
 tmux rename-session $project_name
 tmux rename-window editor
 tmux send-keys -t $project_name:1 'vim' C-m
-
-tmux new-window -t $project_name -c $starting_dir -n console
+tmux split-window -v -l 30% -t $project_name:1
 
 tmux select-window -t $project_name:1
+tmux select-pane -t 1
