@@ -1,15 +1,12 @@
 * {
     normal-black:               #1B1B1E;
     normal-green:               #557B4D;
-    normal-white:               #FDFDFF;
-    normal-yellow:              #FFCF56;
     dim-black:                  #151517;
     dim-white:                  #EAEAEA;
 
     background:                 @normal-green;
     foreground:                 @dim-black;
     background-alt:             @dim-white;
-    urgent-foreground:          @normal-yellow;
 }
 
 window {

@@ -2,14 +2,12 @@
     normal-black:               #1B1B1E;
     normal-green:               #528D6F;
     normal-brown:               #DFDDAD;
-    normal-yellow:              #FFCF56;
     dim-white:                  #D9D9D9;
 
     background:                 @normal-green;
     foreground:                 @dim-white;
     background-alt:             @normal-brown;
     foreground-alt:             @normal-black;
-    urgent-foreground:          @normal-yellow;
 }
 
 window {

@@ -13,7 +13,6 @@
     foreground:                 @normal-white;
     background-alt:             @normal-white;
     foreground-alt:             @normal-black;
-    urgent-foreground:          @normal-yellow;
 }
 
 window {
