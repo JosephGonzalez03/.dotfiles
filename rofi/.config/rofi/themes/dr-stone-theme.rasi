@@ -3,7 +3,7 @@
     normal-green:               #528D6F;
     normal-brown:               #DFDDAD;
     normal-yellow:              #FFCF56;
-    dim-white:                  #EAEAEA;
+    dim-white:                  #D9D9D9;
 
     background:                 @normal-green;
     foreground:                 @dim-white;

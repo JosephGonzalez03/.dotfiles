@@ -1,107 +1,113 @@
 * {
-    normal-black:               #1B1B1E; 
+    normal-black:               #1B1B1E;
     normal-green:               #557B4D;
     normal-white:               #FDFDFF;
     normal-yellow:              #FFCF56;
     dim-black:                  #151517;
     dim-white:                  #EAEAEA;
 
-    backgroud:                  @normal-white;
+    background:                 @normal-green;
     foreground:                 @dim-black;
     background-alt:             @dim-white;
-    selected-background:        @normal-green;
     urgent-foreground:          @normal-yellow;
 }
 
 window {
-    border-color:       @background;
-    background-color:   @background;
-    font:               "JetBrains Mono Nerd Font Regular 12";
+    padding:                    0;
+    border-color:               @background-alt;
+    background-color:           @background-alt;
+    font:                       "JetBrains Mono Nerd Font Regular 12";
 }
 
 mainbox {
-    background-color: inherit;
-    children:   [ inputbar, message, listview ];
+    children: [
+        inputbar,
+        message,
+        listview
+    ];
 }
 
 inputbar {
-    background-color: inherit;
-    text-color: @foreground;
-    children:   [ prompt,textbox-prompt-colon,entry, num-filtered-rows, textbox-num-sep, num-rows, case-indicator ];
+    padding:                    5;
+    background-color:           transparent;
+    text-color:                 @foreground;
+    children: [
+        prompt,
+        textbox-prompt-colon,
+        entry,
+        textbox-prompt-colon,
+        num-filtered-rows,
+        textbox-num-sep,
+        num-rows
+    ];
 }
 
 #prompt {
+    spacing:                    inherit;
+    background-color:           @background;
+    text-color:                 @foreground;
+    padding:                    inherit;
 }
 
 textbox-prompt-colon {
-    margin:     0px 0.3000em 0.0000em 0.0000em ;
-    expand:     false;
-    str:        ":";
-    text-color: inherit;
+    expand:                     false;
+    str:                        "";
+    background-color:           inherit;
+    text-color:                 inherit;
 }
 
 entry {
-    spacing:            9;
-    text-color:         inherit;
-    placeholder-color:  grey;
-    placeholder:        "Type to filter";
+    spacing:                    inherit;
+    border:                     0 0 3 0;
+    border-color:               @background;
+    background-color:           @background-alt;
+    text-color:                 @foreground-alt;
+    placeholder-color:          inherit;
+    placeholder:                "Type to filter";
+    padding:                    inherit;
 }
 
 num-filtered-rows, num-rows {
-    text-color: grey;
-    expand: false;
+    expand:                     false;
+    padding:                    inherit;
+    background-color:           @background;
+    text-color:                 inherit;
 }
 
 textbox-num-sep {
-    text-color: grey;
-    expand: false;
-    str: "/";
+    expand:                     false;
+    str:                        "/";
+    padding:                    inherit;
+    background-color:           @background;
+    text-color:                 inherit;
 }
 
 listview {
-    border-color:       @normal-green;
-    border:             1 0 0 0;
-    columns:            3;
-    scrollbar:          false;
+    padding:                    5;
+    border:                     0;
+    columns:                    3;
+    scrollbar:                  false;
+    background:                 @background;
+    text-color:                 @foreground-alt;
 }
 
 element-text {
-    padding:    1 5;
-    background: @background;
-    text-color: @foreground;
+    padding:                    1 5;
+    background:                 inherit;
+    text-color:                 inherit;
 }
 
 #element.selected.normal {
-    background-color:   @selected-background;
-    text-color:         inherit;
+    background-color:           @background;
+    text-color:                 @foreground;
 }
 
-#element.selected.active {
-    background-color:   @selected-background;
-    text-color:         inherit;
-}
-
-#element.selected.urgent {
-    background-color:   @selected-background;
-    text-color:         @urgent-foreground;
-}
-
-#element.normal.urgent {
-    background-color:   inherit;
-    text-color:         @urgent-foreground;
+#element.normal.normal {
+    background-color:           inherit;
+    text-color:                 inherit;
 }
 
 #element.alternate.normal {
-    background-color:   @background-alt;
-    text-color:         inherit;
-}
-
-#element.alternate.active {
-    background-color:   @background-alt;
-    text-color:         inherit;
-}
-
-#element.alternate.urgent {
-    background-color:   @background-alt;
-    text-color:         @urgent-foreground;
+    background-color:           inherit;
+    text-color:                 inherit;
 }
