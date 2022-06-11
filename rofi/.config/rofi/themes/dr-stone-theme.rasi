@@ -9,7 +9,6 @@
     foreground:                 @dim-white;
     background-alt:             @normal-brown;
     foreground-alt:             @normal-black;
-    selected-background:        @normal-green;
     urgent-foreground:          @normal-yellow;
 }
 
@@ -87,23 +86,8 @@ element-text {
 }
 
 #element.selected.normal {
-    background-color:   @selected-background;
+    background-color:   @background;
     text-color:         @foreground;
-}
-
-#element.selected.active {
-    background-color:   @selected-background;
-    text-color:         @foreground;
-}
-
-#element.selected.urgent {
-    background-color:   @selected-background;
-    text-color:         @urgent-foreground;
-}
-
-#element.normal.urgent {
-    background-color:   inherit;
-    text-color:         @urgent-foreground;
 }
 
 #element.normal.normal {
@@ -114,14 +98,4 @@ element-text {
 #element.alternate.normal {
     background-color:   inherit;
     text-color:         inherit;
-}
-
-#element.alternate.active {
-    background-color:   @background-alt;
-    text-color:         inherit;
-}
-
-#element.alternate.urgent {
-    background-color:   @background-alt;
-    text-color:         @urgent-foreground;
 }
