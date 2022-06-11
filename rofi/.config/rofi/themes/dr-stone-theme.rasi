@@ -9,6 +9,7 @@
     foreground:                 @dim-white;
     background-alt:             @normal-brown;
     foreground-alt:             @normal-black;
+    selected-background:        @normal-green;
     urgent-foreground:          @normal-yellow;
 }
 
@@ -75,36 +76,28 @@ listview {
     border:             0;
     columns:            3;
     scrollbar:          false;
-}
-
-element-text {
-    padding:            2 6 2;
-    background-color:   @background-alt;
+    background:         @background;
     text-color:         @foreground-alt;
 }
 
-#element.normal.normal {
-    background-color:   inherit;
-}
-
-#element.alternate.normal {
-    background-color:   inherit;
+element-text {
+    padding:    1 5;
+    background: inherit;
+    text-color: inherit;
 }
 
 #element.selected.normal {
-    border:             3;
-    border-color:       @background;
-    text-color:         inherit;
+    background-color:   @selected-background;
+    text-color:         @foreground;
 }
 
 #element.selected.active {
-    border:             0;
-    border-color:       @background-alt;
-    text-color:         inherit;
+    background-color:   @selected-background;
+    text-color:         @foreground;
 }
 
 #element.selected.urgent {
-    background-color:   inherit;
+    background-color:   @selected-background;
     text-color:         @urgent-foreground;
 }
 
@@ -113,7 +106,22 @@ element-text {
     text-color:         @urgent-foreground;
 }
 
-#element.alternate.urgent {
+#element.normal.normal {
     background-color:   inherit;
+    text-color:         inherit;
+}
+
+#element.alternate.normal {
+    background-color:   inherit;
+    text-color:         inherit;
+}
+
+#element.alternate.active {
+    background-color:   @background-alt;
+    text-color:         inherit;
+}
+
+#element.alternate.urgent {
+    background-color:   @background-alt;
     text-color:         @urgent-foreground;
 }
