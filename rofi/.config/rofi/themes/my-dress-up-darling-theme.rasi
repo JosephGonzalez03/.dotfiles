@@ -1,5 +1,5 @@
 * {
-    normal-black:               #1B1B1E;
+    normal-black:               #30343F;
     normal-pink:                #E9B8C2;
     normal-green:               #528D6F;
     normal-brown:               #DFDDAD;
@@ -16,6 +16,10 @@
 }
 
 window {
+    location:                   north west;
+    x-offset:                   5;
+    y-offset:                   30;
+    width:                      300;
     padding:                    0;
     border-color:               @background-alt;
     background-color:           @background-alt;
@@ -38,10 +42,7 @@ inputbar {
         prompt,
         textbox-prompt-colon,
         entry,
-        textbox-prompt-colon,
-        num-filtered-rows,
-        textbox-num-sep,
-        num-rows
+        textbox-prompt-colon
     ];
 }
 
@@ -88,7 +89,7 @@ textbox-num-sep {
 listview {
     padding:                    5;
     border:                     0;
-    columns:                    3;
+    columns:                    1;
     scrollbar:                  false;
     background:                 @background;
     text-color:                 @foreground-alt;
