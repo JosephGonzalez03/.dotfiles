@@ -29,7 +29,7 @@ function update_alacritty_theme() {
     sed -i -E "265 s/(([a-zA-Z0-9]+-.[^\/\.]+)+)/$1/" ${theme_file_paths[2]}
 }
 
-selected_theme=$( get_themes | rofi -dmenu -i -p "theme select" )
+selected_theme=$( get_themes | rofi -dmenu -i -p "select" )
 
 case "$selected_theme" in
     "forest")
