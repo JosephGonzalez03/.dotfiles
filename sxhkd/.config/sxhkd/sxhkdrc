@@ -18,6 +18,10 @@ super + r
 super + e
         pcmanfm
 
+# take screenshot
+super + Print
+        flameshot screen -d 3000
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
