@@ -6,6 +6,10 @@
 super + Return
 	alacritty
 
+# power menu
+super + p
+        rofi -show power-menu --choices=suspend/reboot/shutdown
+
 # program launcher
 super + r
 	rofi -show run
