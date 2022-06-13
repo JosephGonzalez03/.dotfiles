@@ -6,7 +6,7 @@ get_options() {
 	echo "both"
 }
 
-choice=$( get_options | rofi -dmenu -i -p "screen toggle" )
+choice=$( get_options | rofi -dmenu -i -p "select" )
 
 reset_defaults() {
         #echo 'awesome.restart()' | awesome-client 2> /dev/null
