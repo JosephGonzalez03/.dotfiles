@@ -3,4 +3,8 @@
 bspc node -t floating
 cat $HOME/.dotfiles/sxhkd/.config/sxhkd/sxhkdrc | \
     grep -v -P '\t' | \
+    sed -n \
+        -e 's/\(##.*\)$/\n\1\n/gp' \
+        -e 's/^# //gp' \
+        -e 's/super/\tsuper/gp' | \
     less

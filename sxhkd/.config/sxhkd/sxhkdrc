@@ -1,6 +1,4 @@
-#
-# wm independent hotkeys
-#
+## wm independent hotkeys
 
 # show hotkeys
 super + q
@@ -30,9 +28,7 @@ super + Print
 super + Escape
 	pkill -USR1 -x sxhkd
 
-#
-# bspwm hotkeys
-#
+## bspwm hotkeys
 
 # quit/restart bspwm
 super + alt + {q,r}
@@ -54,9 +50,7 @@ super + y
 super + g
 	bspc node -s biggest.window
 
-#
-# state/flags
-#
+## state/flags
 
 # set the window state
 super + {t,shift + t,s,f}
@@ -66,9 +60,7 @@ super + {t,shift + t,s,f}
 super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
 
-#
-# focus/swap
-#
+## focus/swap
 
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
@@ -104,9 +96,7 @@ super + {o,i}
 super + {_,shift +,alt +}{1-9,0}
 	bspc {desktop -f,node -d,node -m} '^{1-9,10}' --follow
 
-#
-# preselect
-#
+## preselect
 
 # preselect the direction
 super + ctrl + {h,j,k,l}
@@ -124,9 +114,7 @@ super + ctrl + space
 super + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
-#
-# move/resize
-#
+## move/resize
 
 # expand a window by moving one of its side outward
 super + alt + {h,j,k,l}
