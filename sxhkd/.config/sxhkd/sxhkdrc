@@ -8,7 +8,7 @@ super + Return
 
 # power menu
 super + p
-        rofi -show powermenu -modi "powermenu:rofi-power-menu --choices=suspend/reboot/shutdown"
+	rofi -show powermenu -modi "powermenu:rofi-power-menu --choices=suspend/reboot/shutdown"
 
 # program launcher
 super + r
@@ -16,11 +16,11 @@ super + r
 
 # launch file explore
 super + e
-        pcmanfm
+	pcmanfm
 
 # take screenshot
 super + Print
-        flameshot screen -d 3000
+	flameshot screen -d 3000
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -84,7 +84,7 @@ super + bracket{left,right}
 
 # focus the next/previous monitor in the current setup
 super + alt + bracket{left,right}
-        bspc monitor -f {west,east}
+	bspc monitor -f {west,east}
 
 # focus the last node/desktop
 super + {grave,Tab}
