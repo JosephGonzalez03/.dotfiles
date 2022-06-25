@@ -1,0 +1,6 @@
+#!/bin/bash
+
+bspc node -t floating
+cat $HOME/.dotfiles/sxhkd/.config/sxhkd/sxhkdrc | \
+    grep -v -P '\t' | \
+    less

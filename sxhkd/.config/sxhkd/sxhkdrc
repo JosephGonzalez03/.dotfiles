@@ -2,6 +2,10 @@
 # wm independent hotkeys
 #
 
+# show hotkeys
+super + q
+	alacritty -e hotkeys
+
 # terminal emulator
 super + Return
 	alacritty
