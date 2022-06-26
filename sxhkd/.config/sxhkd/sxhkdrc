@@ -16,13 +16,13 @@ super + r
 super + e
 	pcmanfm
 
+# screenshot screen / region
+super + {_,alt} + x
+	flameshot {screen -d 2000,gui}
+
 # terminal emulator
 super + Return
 	alacritty
-
-# screenshot screen / region
-super + {_,alt} + Print
-	flameshot {screen -d 2000,gui}
 
 # make sxhkd reload its configuration files:
 super + Escape
