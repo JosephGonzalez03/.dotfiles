@@ -1,10 +1,21 @@
 #!/bin/bash
 
+width=40
+height=80
+
 bspc node -t floating
+bspc node -z left -$width 0
+bspc node -z right $width 0
+bspc node -z top 0 -$height
+bspc node -z bottom 0 $height
 cat $HOME/.dotfiles/sxhkd/.config/sxhkd/sxhkdrc | \
     grep -v -P '\t' | \
     sed -n \
-        -e 's/\(##.*\)$/\n\1\n/gp' \
-        -e 's/^# //gp' \
-        -e 's/super/\tsuper/gp' | \
+        -e 's/## /\n|## /gp' \
+        -e '/^# /{:a; N; s/\n/|/g; s/^# //gp}' | \
+    column -t -s '|' \
+        -L \
+        -O 2,1 \
+        -N 'description,hotkey' \
+        -E 'description' | \
     less
