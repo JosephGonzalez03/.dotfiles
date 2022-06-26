@@ -52,21 +52,21 @@ super + g
 
 ## state/flags
 
-# set the window state
+# set the window state (tiled, pseudo_tiled, floating, fullscreen)
 super + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
-# set the node flags
+# set the node flags (marked, locked, sticky, private)
 super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
 
 ## focus/swap
 
-# focus the node in the given direction
+# focus the node in the given direction (west, south, north, east)
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
-# focus the node for the given path jump
+# focus the node for the given path jump (parent, brother, first, second)
 super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
@@ -98,7 +98,7 @@ super + {_,shift +,alt +}{1-9,0}
 
 ## preselect
 
-# preselect the direction
+# preselect the direction (west, south, north, east)
 super + ctrl + {h,j,k,l}
 	bspc node -p {west,south,north,east}
 
