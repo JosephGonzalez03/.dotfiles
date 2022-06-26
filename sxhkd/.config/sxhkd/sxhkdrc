@@ -4,10 +4,6 @@
 super + q
 	alacritty -e hotkeys
 
-# terminal emulator
-super + Return
-	alacritty
-
 # power menu
 super + p
 	rofi -show powermenu -modi "powermenu:rofi-power-menu --choices=suspend/reboot/shutdown"
@@ -20,9 +16,13 @@ super + r
 super + e
 	pcmanfm
 
-# take screenshot
-super + Print
-	flameshot screen -d 3000
+# terminal emulator
+super + Return
+	alacritty
+
+# screenshot screen / region
+super + {_,alt} + Print
+	flameshot {screen -d 2000,gui}
 
 # make sxhkd reload its configuration files:
 super + Escape
