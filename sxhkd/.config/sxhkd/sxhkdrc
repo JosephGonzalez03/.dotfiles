@@ -2,6 +2,7 @@
 
 # show hotkeys
 super + q
+        bspc rule -a \* -o state=floating && \
 	alacritty -e hotkeys
 
 # power menu
