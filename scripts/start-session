@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -eo pipefail
+starting_directory=$(cd ~ && find . -type d -print | fzf | xargs -I directory realpath directory 2>/dev/null | xargs -I starting_directory echo starting_directory)
+
+if [ -n "$?" ]; then
+    tmux new -c $starting_directory
+fi
+
+clear

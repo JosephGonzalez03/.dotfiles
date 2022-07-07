@@ -7,7 +7,7 @@
 
 source ~/.git-prompt.sh
 
-bind '"\C-f":"tmux new -c $(cd ~ && find . -type d -print | fzf | xargs -I directory realpath directory) 2>/dev/null; clear \n"'
+bind '"\C-f":"start-session \n"'
 
 alias l='exa -l'
 
