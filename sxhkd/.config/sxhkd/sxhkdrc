@@ -1,7 +1,7 @@
 ## wm independent hotkeys
 
 # show hotkeys
-super + q
+super + s
         bspc rule -a \* -o state=floating && \
 	alacritty -e hotkeys
 
