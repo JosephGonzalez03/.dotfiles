@@ -261,6 +261,32 @@ themes:
         magenta: '#FCE5E1'
         cyan:    '#FEE7E3'
         white:   '#FDFCF6'
+    moon-man-theme: &moon-man-theme
+      primary:
+        background: '#0d0d0d'
+        foreground: '#D6D6D6'
+      search:
+        matches:
+          foreground: '#000000'
+      normal:
+        black:   '#4F463E'
+        red:     '#7F7E6E'
+        green:   '#B0AE96'
+        yellow:  '#b0ae96'
+        blue:    '#949C88'
+        magenta: '#5f7236'
+        cyan:    '#949296'
+        white:   '#5C575D'
+      bright:
+        black:   '#4F463E'
+        red:     '#7F7E6E'
+        green:   '#B0AE96'
+        yellow:  '#b0ae96'
+        blue:    '#949C88'
+        magenta: '#5f7236'
+        cyan:    '#949296'
+        white:   '#5C575D'
+
 
 colors: *forest-theme
 

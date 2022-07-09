@@ -11,6 +11,7 @@ function get_themes() {
     echo "forest"
     echo "dr stone"
     echo "simp"
+    echo "moon man"
 }
 
 function update_wallpaper() {
@@ -26,7 +27,7 @@ function update_rofi_theme() {
 }
 
 function update_alacritty_theme() {
-    sed -i -E "265 s/(([a-zA-Z0-9]+-.[^\/\.]+)+)/$1/" ${theme_file_paths[2]}
+    sed -i -E "291 s/(([a-zA-Z0-9]+-.[^\/\.]+)+)/$1/" ${theme_file_paths[2]}
 }
 
 selected_theme=$( get_themes | rofi -dmenu -i -p "select" )
@@ -49,6 +50,12 @@ case "$selected_theme" in
         update_polybar_theme 'my-dress-up-darling-theme'
         update_rofi_theme 'my-dress-up-darling-theme'
         update_alacritty_theme 'my-dress-up-darling'
+        ;;
+    "moon man")
+        update_wallpaper 'moon-man'
+        update_polybar_theme 'moon-man-theme'
+        update_rofi_theme 'my-dress-up-darling-theme'
+        update_alacritty_theme 'moon-man-theme'
         ;;
     *)
         ;;
