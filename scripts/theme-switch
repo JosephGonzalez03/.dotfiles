@@ -7,13 +7,6 @@ theme_file_paths=(
     $config_dir/alacritty/alacritty.yml
 )
 
-function get_themes() {
-    echo "forest"
-    echo "dr stone"
-    echo "simp"
-    echo "moon man"
-}
-
 function update_wallpaper() {
     sed -i -E "11 s/(\/([a-zA-Z0-9]+-.[^\/\.]+)+)/\/$1/" ${theme_file_paths[0]}
 }
@@ -28,6 +21,13 @@ function update_rofi_theme() {
 
 function update_alacritty_theme() {
     sed -i -E "291 s/(([a-zA-Z0-9]+-.[^\/\.]+)+)/$1/" ${theme_file_paths[2]}
+}
+
+function get_themes() {
+    echo "forest"
+    echo "dr stone"
+    echo "simp"
+    echo "moon man"
 }
 
 selected_theme=$( get_themes | rofi -dmenu -i -p "select" )
