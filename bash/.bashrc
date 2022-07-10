@@ -8,6 +8,7 @@
 source ~/.git-prompt.sh
 
 bind '"\C-f":"start-session \n"'
+bind '"\C-a":"tmux a \n"'
 
 alias l='exa -l'
 
