@@ -5,5 +5,13 @@ starting_directory=$(
     cd ~ && find . ~/Repos -mindepth 1 -maxdepth 1 -type d -print | \
     fzf | \
     xargs -I directory realpath directory 2>/dev/null)
-tmux new -c $starting_directory
+
+project_name=$(basename $starting_directory | sed -e "s/\./_/")
+
+if ! tmux has-session -t $project_name 2> /dev/null; then
+    tmux new -c $starting_directory -s $project_name
+else
+    tmux attach -t $project_name
+fi
+
 clear
