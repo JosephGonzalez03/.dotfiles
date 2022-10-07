@@ -18,3 +18,4 @@ export PATH='/home/joe/.luarocks/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/us
 export EDITOR=vim
 export STOW_DIR=~/.dotfiles/
 eval "$(starship init bash)"
+. "$HOME/.cargo/env"
