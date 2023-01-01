@@ -1,3 +1,2 @@
-require('keybindings')
-require('plugins')
+require('plugins/packer')
 require('settings')

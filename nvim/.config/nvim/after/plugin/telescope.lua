@@ -3,11 +3,11 @@ local finders = require('telescope.builtin')
 
 require('telescope').setup({
     defaults = {
-        prompt_prefix = ' ❯ ',
+        prompt_prefix = '',
         initial_mode = 'insert',
-        sorting_strategy = 'ascending',
+        sorting_strategy = 'descending',
         layout_config = {
-            prompt_position = 'top',
+            prompt_position = 'bottom',
         },
         mappings = {
             i = {
@@ -40,7 +40,7 @@ local Telescope = setmetatable({}, {
 })
 
 -- Ctrl-p = fuzzy finder
-vim.keymap.set('n', '<leader>n', function()
+vim.keymap.set('n', '<leader>f', function()
     local ok = pcall(Telescope.git_files, { show_untracked = true })
     if not ok then
         Telescope.find_files()
