@@ -14,8 +14,8 @@ reset_defaults() {
 }
 
 move_input_sinks_to_viotek_monitor_with_sound() {
-    pactl set-card-profile alsa_card.pci-0000_0b_00.1 output:hdmi-stereo-extra4
-    hdmi_5_card_sink=$(pactl list short sinks | sed -n '/alsa_output.pci-0000_0b_00.1.hdmi-stereo-extra4/p' | cut -f 1)
+    pactl set-card-profile alsa_card.pci-0000_0b_00.1 output:hdmi-stereo
+    hdmi_5_card_sink=$(pactl list short sinks | sed -n '/alsa_output.pci-0000_0b_00.1.hdmi-stereo/p' | cut -f 1)
     sink_inputs=$(pactl list short sink-inputs | cut -f 1)
 
     for sink_input in sink_inputs; do
