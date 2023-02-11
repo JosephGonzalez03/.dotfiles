@@ -15,7 +15,7 @@ super + r
 
 # launch file explore
 super + e
-	pcmanfm
+	alacritty -e lf
 
 # screenshot screen / region
 super + {_,alt} + x
