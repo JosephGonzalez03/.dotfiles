@@ -11,8 +11,8 @@
 
     background:                 @normal-pink;
     foreground:                 @normal-white;
-    background-alt:             @normal-white;
-    foreground-alt:             @normal-black;
+    background-alt:             @normal-black;
+    foreground-alt:             @normal-white;
 }
 
 window {
