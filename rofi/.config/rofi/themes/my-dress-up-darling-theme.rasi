@@ -35,7 +35,7 @@ mainbox {
 }
 
 inputbar {
-    padding:                    5;
+    padding:                    0;
     background-color:           transparent;
     text-color:                 @foreground;
     children: [
@@ -50,7 +50,7 @@ inputbar {
     spacing:                    inherit;
     background-color:           @background;
     text-color:                 @foreground;
-    padding:                    inherit;
+    padding:                    5;
 }
 
 textbox-prompt-colon {
@@ -68,7 +68,7 @@ entry {
     text-color:                 @foreground-alt;
     placeholder-color:          inherit;
     placeholder:                "Type to filter";
-    padding:                    inherit;
+    padding:                    5;
 }
 
 num-filtered-rows, num-rows {
@@ -81,13 +81,13 @@ num-filtered-rows, num-rows {
 textbox-num-sep {
     expand:                     false;
     str:                        "/";
-    padding:                    inherit;
+    padding:                    5;
     background-color:           @background;
     text-color:                 inherit;
 }
 
 listview {
-    padding:                    5;
+    padding:                    0;
     border:                     0;
     columns:                    1;
     scrollbar:                  false;
