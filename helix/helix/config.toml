@@ -1,0 +1,13 @@
+theme = "gruvbox_dark_soft"
+
+[editor]
+line-number = "relative"
+color-modes = true
+
+[editor.statusline]
+left = ["mode", "file-name"]
+center = []
+right = ["position", "position-percentage"]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"

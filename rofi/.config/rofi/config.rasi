@@ -1,5 +1,0 @@
-configuration {
-	modi: "run";
-}
-
-@import "forest-theme.rasi"

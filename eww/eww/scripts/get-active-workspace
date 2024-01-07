@@ -1,0 +1,9 @@
+#!/usr/bin/env nu
+hyprctl monitors -j
+  | from json
+  | filter {|item| $item.focused}
+  | first
+  | get activeWorkspace.name
+
+#socat -u $'UNIX-CONNECT:/tmp/hypr/($env.HYPRLAND_INSTANCE_SIGNATURE)/.socket2.sock' -
+#  | awk -F '>>|,' -e '/^workspace>>/ {print $2}' -e '/^focusedmon>>/ {print $3}'

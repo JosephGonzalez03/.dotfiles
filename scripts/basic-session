@@ -1,8 +1,0 @@
-#!/bin/bash
-
-tmux rename-window editor
-tmux send-keys -t 1 'nvim' C-m
-tmux split-window -v -l 30% -t 1
-
-tmux select-window -t 1
-tmux select-pane -t 1

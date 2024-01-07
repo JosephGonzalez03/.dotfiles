@@ -1,0 +1,114 @@
+(defwidget music []
+  (box :class "music"
+       :orientation "h"
+       :space-evenly false
+       :halign "center"
+    {music != "" ? "🎵${music}" : ""}))
+
+
+(defwidget metric [label value onchange]
+  (box
+    :class "metric"
+    :orientation "h"
+    (scale
+      :min 0
+      :max 101
+      :orientation "h"
+      :active {onchange != ""}
+      :value value
+      :onchange onchange
+    )
+  )
+)
+
+(deflisten music :initial ""
+  "playerctl --follow metadata --format '{{ artist }} - {{ title }}' || true")
+
+;;(deflisten current_workspace
+;;  :initial "1"
+;;  "bash ~/.config/eww/scripts/get-active-workspace"
+;;)
+
+(defpoll current_workspace :interval "1s"
+  "scripts/get-active-workspace"
+)
+
+(defpoll workspaces :interval "1s"
+  "scripts/get-workspaces"
+)
+
+(defpoll volume :interval "1s"
+  "scripts/getvol")
+
+(defpoll day :interval "10s"
+  "date '+%b %e'")
+
+(defpoll time :interval "10s"
+  "date '+%H|%M'")
+
+(defwidget bar []
+  (box
+    :class "status-bar"
+    (box
+      :orientation "h"
+      :space-evenly false
+      (label
+        :class "primary-left"
+        :text "󰣐 | ${current_workspace}"
+      )
+      (box
+        :class "secondary-left"
+        :space-evenly false
+        :orientation "h"
+        (label
+          :class "workspaces"
+          :text "${workspaces}"
+        )
+      )
+    )
+    (box
+      :orientation "h"
+      :space-evenly false
+      :halign "center"
+      (box
+        :class "primary-left"
+        :space-evenly false
+        :orientation "h"
+        (label
+          :text "XP"
+        )
+      )
+      (metric
+        :class "primary-left"
+        :label "${volume}%"
+        :value volume
+        :onchange "pamixer --set-volume {}"
+      )
+    )
+    (box
+      :orientation "h"
+      :space-evenly false
+      :halign "end"
+      (label
+        :class "primary-right"
+        :text "${day}"
+      )
+      (label
+        :class "primary-right"
+        :text "${time}"
+      )
+    )
+  )
+)
+
+(defwindow bar
+  :monitor 0
+  :windowtype "dock"
+  :geometry (geometry 
+    :width "100%"
+    :height "2%"
+    :anchor "top center"
+  )
+  :exclusive true
+  (bar)
+)

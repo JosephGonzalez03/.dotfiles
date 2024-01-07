@@ -1,0 +1,6 @@
+#!/usr/bin/env nu
+
+hyprctl workspaces -j
+  | from json
+  | each { |it| "󱐟" }
+  | reduce { |it, acc| $acc + $" ($it)" } 

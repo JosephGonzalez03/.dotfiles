@@ -1,0 +1,74 @@
+* {
+  all: unset; //Unsets everything so you can style everything from scratch
+  font-family: "RobotoMonoNerdFont";
+  font-size: 1.1rem;
+}
+
+//Global Styles
+.bar {
+  color: #b0b4bc;
+  padding: 2px;
+}
+
+.status-bar {
+ .primary-left {
+    background-color: #3d412f;
+    border-radius: 10px;
+    border-radius: 50px 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+ }
+ .secondary-left {
+    background-color: #5a5b67;
+    border-width: 20px 20px;
+    border-radius: 50px 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+ .primary-right {
+    background-color: #3d412f;
+    border-radius: 10px;
+    border-radius: 0px 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+ }
+  .icon {
+    font-size: 1.5rem;
+  }
+}
+
+
+// Styles on classes (see eww.yuck for more information)
+
+.metric scale trough highlight {
+  all: unset;
+  background-color: #D35D6E;
+  color: #000000;
+  border-radius: 10px;
+}
+.metric scale trough highlight {
+  all: unset;
+  background-color: #8bbe3b;
+  color: #000000;
+  border-radius: 50px 0px;
+}
+.metric scale trough {
+  all: unset;
+  background-color: #4e4e4e;
+  border-radius: 50px 0px;
+  min-height: 30px;
+  min-width: 400px;
+}
+.label-ram {
+  font-size: large;
+}
+.workspaces button:hover {
+  color: #D35D6E;
+}
+

@@ -1,0 +1,10 @@
+simplified_ui true
+default_shell "nu"
+theme "gruvbox-dark"
+pane_frames false
+
+keybindings {
+  session {
+    bind "Ctrl z" { SwitchToMode "Normal"; }
+  }
+}
