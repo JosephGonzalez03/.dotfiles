@@ -1,6 +1,7 @@
 theme = "gruvbox_dark_soft"
 
 [editor]
+auto-pairs = false
 line-number = "relative"
 color-modes = true
 
