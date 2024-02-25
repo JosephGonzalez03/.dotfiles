@@ -2,5 +2,5 @@
 
 hyprctl workspaces -j
   | from json
-  | each { |it| "󱐟" }
+  | each { |it| "󰣐" }
   | reduce { |it, acc| $acc + $" ($it)" } 

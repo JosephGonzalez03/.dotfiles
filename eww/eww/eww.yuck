@@ -1,8 +1,9 @@
 (defwidget music []
-  (box :class "music"
-       :orientation "h"
-       :space-evenly false
-       :halign "center"
+  (box
+    :class "music"
+    :orientation "h"
+    :space-evenly false
+    :halign "center"
     {music != "" ? "🎵${music}" : ""}))
 
 
@@ -21,7 +22,8 @@
   )
 )
 
-(deflisten music :initial ""
+(deflisten music
+  :initial ""
   "playerctl --follow metadata --format '{{ artist }} - {{ title }}' || true")
 
 ;;(deflisten current_workspace
@@ -29,22 +31,30 @@
 ;;  "bash ~/.config/eww/scripts/get-active-workspace"
 ;;)
 
-(defpoll current_workspace :interval "1s"
+(defpoll current_workspace
+  :interval "1s"
   "scripts/get-active-workspace"
 )
 
-(defpoll workspaces :interval "1s"
+(defpoll workspaces
+  :interval "1s"
   "scripts/get-workspaces"
 )
 
-(defpoll volume :interval "1s"
-  "scripts/getvol")
+(defpoll volume
+  :interval "1s"
+  "scripts/getvol"
+)
 
-(defpoll day :interval "10s"
-  "date '+%b %e'")
+(defpoll day
+  :interval "10s"
+  "date '+%b %e'"
+)
 
-(defpoll time :interval "10s"
-  "date '+%H|%M'")
+(defpoll time
+  :interval "10s"
+  "date '+%H:%M'"
+)
 
 (defwidget bar []
   (box
@@ -53,11 +63,11 @@
       :orientation "h"
       :space-evenly false
       (label
-        :class "primary-left"
-        :text "󰣐 | ${current_workspace}"
+        :class "primary"
+        :text "LVL ${current_workspace}"
       )
       (box
-        :class "secondary-left"
+        :class "secondary"
         :space-evenly false
         :orientation "h"
         (label
@@ -71,7 +81,7 @@
       :space-evenly false
       :halign "center"
       (box
-        :class "primary-left"
+        :class "primary"
         :space-evenly false
         :orientation "h"
         (label
@@ -79,7 +89,7 @@
         )
       )
       (metric
-        :class "primary-left"
+        :class "primary"
         :label "${volume}%"
         :value volume
         :onchange "pamixer --set-volume {}"
@@ -90,11 +100,11 @@
       :space-evenly false
       :halign "end"
       (label
-        :class "primary-right"
+        :class "primary"
         :text "${day}"
       )
       (label
-        :class "primary-right"
+        :class "primary"
         :text "${time}"
       )
     )

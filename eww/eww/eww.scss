@@ -11,33 +11,29 @@
 }
 
 .status-bar {
- .primary-left {
-    background-color: #3d412f;
-    border-radius: 10px;
-    border-radius: 50px 0px;
+ .primary {
+    background-color: #55704f;
+    border-color: #4e7247;
+    border-width: 4px;
+    border-style: outset;
+    border-radius: 25px 25px;
     padding-left: 20px;
     padding-right: 20px;
     margin-left: 5px;
     margin-right: 5px;
  }
- .secondary-left {
-    background-color: #5a5b67;
-    border-width: 20px 20px;
-    border-radius: 50px 0px;
+ .secondary {
+    background-color: #979a9e;
+    color: #901222;
+    border-color: #7c8c87;
+    border-width: 4px;
+    border-style: outset;
+    border-radius: 25px 25px;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: 5px;
     margin-right: 5px;
   }
- .primary-right {
-    background-color: #3d412f;
-    border-radius: 10px;
-    border-radius: 0px 50px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
- }
   .icon {
     font-size: 1.5rem;
   }
@@ -54,14 +50,17 @@
 }
 .metric scale trough highlight {
   all: unset;
-  background-color: #8bbe3b;
+  background-color: #b03f16;
   color: #000000;
-  border-radius: 50px 0px;
+  border-radius: 25px 25px;
 }
 .metric scale trough {
   all: unset;
-  background-color: #4e4e4e;
-  border-radius: 50px 0px;
+  background-color: #222222;
+  border-color: #222222;
+  border-width: 4px;
+  border-style: outset;
+  border-radius: 25px 25px;
   min-height: 30px;
   min-width: 400px;
 }
