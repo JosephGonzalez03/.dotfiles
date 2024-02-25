@@ -1,0 +1,9 @@
+show=run
+
+### 8-bit-life-theme start
+stylesheet=themes/8-bit-life-theme.css
+location=right
+width=20
+xoffset=-200
+height=80%
+### 8-bit-life-theme end
