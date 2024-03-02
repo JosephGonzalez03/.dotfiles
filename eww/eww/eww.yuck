@@ -67,7 +67,7 @@
         :text "LVL ${current_workspace}"
       )
       (box
-        :class "secondary"
+        :class "primary"
         :space-evenly false
         :orientation "h"
         (label
