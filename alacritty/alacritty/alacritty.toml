@@ -1,8 +1,12 @@
+
+[window]
+opacity = 0.8
+
+[general]
 import = [
  "~/.config/alacritty/themes/gruvbox_dark.toml"
 ]
 
-shell.program = "/bin/nu"
+[terminal]
 
-[window]
-opacity = 0.8
+shell.program = "/bin/nu"
