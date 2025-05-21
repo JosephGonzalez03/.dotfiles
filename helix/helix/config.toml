@@ -4,6 +4,7 @@ theme = "gruvbox_dark_soft"
 auto-pairs = false
 line-number = "relative"
 color-modes = true
+end-of-line-diagnostics = "hint"
 
 [editor.statusline]
 left = ["mode", "file-name"]
@@ -12,3 +13,6 @@ right = ["position", "position-percentage"]
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
+
+[editor.inline-diagnostics]
+other-lines = "error"
