@@ -1,0 +1,9 @@
+[user]
+	email = josephdg3@gmail.com
+	name = Joseph Gonzalez
+[alias]
+	cm = commit -m
+	ss = status
+	ap = add -p
+	rh = reset --hard
+	rpo = remote prune origin
