@@ -2,8 +2,9 @@
 	email = josephdg3@gmail.com
 	name = Joseph Gonzalez
 [alias]
-	cm = commit -m
-	ss = status
 	ap = add -p
+	ba = branch --all
+	cm = commit -m
 	rh = reset --hard
 	rpo = remote prune origin
+	ss = status
