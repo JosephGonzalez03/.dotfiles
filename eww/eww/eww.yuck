@@ -59,6 +59,7 @@
 (defwidget bar []
   (box
     :class "status-bar"
+    :space-evenly false
     (box
       :orientation "h"
       :space-evenly false
@@ -112,12 +113,12 @@
 )
 
 (defwindow bar
-  :monitor 0
+  :monitor 'DP-2'
   :windowtype "dock"
   :geometry (geometry 
     :width "100%"
     :height "2%"
-    :anchor "top center"
+    :anchor "top right"
   )
   :exclusive true
   (bar)
