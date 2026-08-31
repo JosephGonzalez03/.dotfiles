@@ -17,3 +17,5 @@
 # options using:
 #     config nu --doc | nu-highlight | less -R
 
+$env.config.buffer_editor = "helix"
+$env.config.show_banner = false
